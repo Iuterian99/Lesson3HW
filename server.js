@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = 9000;
 const bodyParser = require("body-parser");
 const jsw = require("jsonwebtoken");
 const home = require("./routes/home");
@@ -9,4 +10,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(home);
 app.use(login);
 
-app.listen(9000, console.log(9000));
+app.listen(port, () => {
+  console.log(`running at https://localhost:${port}`);
+});
