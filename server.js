@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const jsw = require("jsonwebtoken");
 const home = require("./routes/home");
 const login = require("./routes/login");
+const customFs = require("./customFS/fs");
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(home);
